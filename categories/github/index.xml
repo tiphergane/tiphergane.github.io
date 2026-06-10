@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Github on Les chatons ont la réponse - github.io</title>
-		<link>https://tiphergane.github.io/categories/github/</link>
+		<link>http://localhost:34497/categories/github/</link>
 		<description>Recent content in Github on Les chatons ont la réponse - github.io</description>
 		<generator>Hugo</generator>
 		<language>fr</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 10 Jun 2026 10:29:22 +0200</lastBuildDate>
 		
-			<atom:link href="https://tiphergane.github.io/categories/github/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:34497/categories/github/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Partage de connaissance - lancement du repo learning</title>
-				<link>https://tiphergane.github.io/posts/learning/</link>
+				<link>http://localhost:34497/posts/learning/</link>
 				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
-				<guid>https://tiphergane.github.io/posts/learning/</guid>
+				<guid>http://localhost:34497/posts/learning/</guid>
 				<description>&lt;h2 id=&#34;présentation-du-projet&#34;&gt;&#xA;  Présentation du projet&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#pr%c3%a9sentation-du-projet&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Depuis que j&amp;rsquo;ai commencé les CTF, on ne va pas se le cacher, mais j&amp;rsquo;ai appris plein de choses. Et celles-ci ne servent à rien si elle ne sont pas:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;stockées&lt;/li&gt;&#xA;&lt;li&gt;organisées&lt;/li&gt;&#xA;&lt;li&gt;partagées&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;j&amp;rsquo;ai donc décidé de mettre en ligne tout ce que j&amp;rsquo;avais appris au fil du temps, et me créer un espace où je pourrais ajouter ce que j&amp;rsquo;apprendrais encore dans les années à venir.&lt;/p&gt;</description>
 			</item>
 	</channel>

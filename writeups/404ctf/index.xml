@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>404CTF - les writeups on Les chatons ont la réponse - github.io</title>
-		<link>https://tiphergane.github.io/writeups/404ctf/</link>
+		<link>http://localhost:34497/writeups/404ctf/</link>
 		<description>Recent content in 404CTF - les writeups on Les chatons ont la réponse - github.io</description>
 		<generator>Hugo</generator>
 		<language>fr</language>
@@ -12,6 +12,6 @@
 		
 			<lastBuildDate></lastBuildDate>
 		
-			<atom:link href="https://tiphergane.github.io/writeups/404ctf/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:34497/writeups/404ctf/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>

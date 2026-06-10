@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tiphergane.github.io/categories/</loc>
+    <loc>http://localhost:34497/categories/</loc>
     <lastmod>2026-06-10T11:20:14+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/ctf/</loc>
+    <loc>http://localhost:34497/categories/ctf/</loc>
     <lastmod>2026-06-10T11:20:14+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/shutlock/</loc>
+    <loc>http://localhost:34497/categories/shutlock/</loc>
     <lastmod>2026-06-10T11:20:14+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/writeups/shutlock/</loc>
+    <loc>http://localhost:34497/writeups/shutlock/</loc>
     <lastmod>2026-06-10T11:20:14+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/writeups/</loc>
+    <loc>http://localhost:34497/categories/writeups/</loc>
     <lastmod>2026-06-10T11:20:14+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/writeups/</loc>
+    <loc>http://localhost:34497/writeups/</loc>
     <lastmod>2026-06-10T11:14:05+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/authors/</loc>
+    <loc>http://localhost:34497/authors/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/code/</loc>
+    <loc>http://localhost:34497/categories/code/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/github/</loc>
+    <loc>http://localhost:34497/categories/github/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/kittens-life/</loc>
+    <loc>http://localhost:34497/categories/kittens-life/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/posts/learning/</loc>
+    <loc>http://localhost:34497/posts/learning/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/posts/</loc>
+    <loc>http://localhost:34497/posts/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/authors/tiphergane/</loc>
+    <loc>http://localhost:34497/authors/tiphergane/</loc>
     <lastmod>2026-06-10T10:29:22+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/fcsc/</loc>
+    <loc>http://localhost:34497/categories/fcsc/</loc>
     <lastmod>2026-06-10T10:16:23+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/writeups/fcsc/</loc>
+    <loc>http://localhost:34497/writeups/fcsc/</loc>
     <lastmod>2026-06-10T10:16:23+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/404ctf/</loc>
+    <loc>http://localhost:34497/categories/404ctf/</loc>
     <lastmod>2026-06-10T10:09:20+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/writeups/404ctf/</loc>
+    <loc>http://localhost:34497/writeups/404ctf/</loc>
     <lastmod>2026-06-10T10:09:20+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/series/</loc>
+    <loc>http://localhost:34497/series/</loc>
   </url><url>
-    <loc>https://tiphergane.github.io/tags/</loc>
+    <loc>http://localhost:34497/tags/</loc>
   </url>
 </urlset>

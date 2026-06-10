@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Shutlock on Les chatons ont la réponse - github.io</title>
-		<link>https://tiphergane.github.io/categories/shutlock/</link>
+		<link>http://localhost:34497/categories/shutlock/</link>
 		<description>Recent content in Shutlock on Les chatons ont la réponse - github.io</description>
 		<generator>Hugo</generator>
 		<language>fr</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 10 Jun 2026 11:20:14 +0200</lastBuildDate>
 		
-			<atom:link href="https://tiphergane.github.io/categories/shutlock/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:34497/categories/shutlock/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Shutlock</title>
-				<link>https://tiphergane.github.io/writeups/shutlock/</link>
+				<link>http://localhost:34497/writeups/shutlock/</link>
 				<pubDate>Wed, 10 Jun 2026 11:20:14 +0200</pubDate>
-				<guid>https://tiphergane.github.io/writeups/shutlock/</guid>
+				<guid>http://localhost:34497/writeups/shutlock/</guid>
 				<description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/tiphergane/shutlock&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2024&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34; &gt;2025 - pas de lien, j&amp;rsquo;ai raté cette édition&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34; &gt;2026 - à venir&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Authors on Les chatons ont la réponse - github.io</title>
-		<link>https://tiphergane.github.io/authors/</link>
+		<link>http://localhost:34497/authors/</link>
 		<description>Recent content in Authors on Les chatons ont la réponse - github.io</description>
 		<generator>Hugo</generator>
 		<language>fr</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 10 Jun 2026 10:29:22 +0200</lastBuildDate>
 		
-			<atom:link href="https://tiphergane.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:34497/authors/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Tiphergane</title>
-				<link>https://tiphergane.github.io/authors/tiphergane/</link>
+				<link>http://localhost:34497/authors/tiphergane/</link>
 				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
-				<guid>https://tiphergane.github.io/authors/tiphergane/</guid>
+				<guid>http://localhost:34497/authors/tiphergane/</guid>
 				<description></description>
 			</item>
 	</channel>
