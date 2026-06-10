@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ctf on Les chatons ont la réponse - github.io</title>
+		<link>https://tiphergane.github.io/categories/ctf/</link>
+		<description>Recent content in Ctf on Les chatons ont la réponse - github.io</description>
+		<generator>Hugo</generator>
+		<language>fr-fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 10 Jun 2026 10:29:22 +0200</lastBuildDate>
+		
+			<atom:link href="https://tiphergane.github.io/categories/ctf/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Partage de connaissance - lancement du repo learning</title>
+				<link>https://tiphergane.github.io/posts/learning/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>https://tiphergane.github.io/posts/learning/</guid>
+				<description>&lt;h2 id=&#34;présentation-du-projet&#34;&gt;Présentation du projet&lt;/h2&gt;&#xA;&lt;p&gt;Depuis que j&amp;rsquo;ai commencé les CTF, on ne va pas se le cacher, mais j&amp;rsquo;ai appris plein de choses. Et celles-ci ne servent à rien si elle ne sont pas:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;stockées&lt;/li&gt;&#xA;&lt;li&gt;organisées&lt;/li&gt;&#xA;&lt;li&gt;partagées&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;j&amp;rsquo;ai donc décidé de mettre en ligne tout ce que j&amp;rsquo;avais appris au fil du temps, et me créer un espace où je pourrais ajouter ce que j&amp;rsquo;apprendrais encore dans les années à venir.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
