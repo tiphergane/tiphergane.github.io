@@ -10,6 +10,15 @@
 		
 		
 		
+			<lastBuildDate>Wed, 10 Jun 2026 10:29:22 +0200</lastBuildDate>
+		
 			<atom:link href="https://tiphergane.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Tiphergane</title>
+				<link>https://tiphergane.github.io/authors/tiphergane/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>https://tiphergane.github.io/authors/tiphergane/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>
