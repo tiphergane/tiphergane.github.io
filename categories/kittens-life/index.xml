@@ -6,7 +6,10 @@
 &lt;li&gt;le blog était auto-hébergé, ce qui me rajoutais une charge de &amp;ldquo;travail&amp;rdquo; à la maison pour suivre les CVE et patcher (pas envie de faire partie d&amp;rsquo;un botnet)&lt;/li&gt;
 &lt;li&gt;exposer un port 443 sur le net, et c&amp;rsquo;est la foire au scan/attaques. Mon firewall me remonte des tétrachiées de tentative d&amp;rsquo;attaques faites par des script kiddies et j&amp;rsquo;ai plus envie de risquer de compromettre la sécurité du mon réseau juste pour faire des analyses.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Donc voilà, on va migrer sur github.io, et entre nous, écrire les choses en markdown est bien plus relaxant qu&amp;rsquo;avec l&amp;rsquo;éditeur de wordpress.&lt;/p&gt;</description></item><item><title>Partage de connaissance - lancement du repo learning</title><link>https://tiphergane.github.io/posts/learning/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/posts/learning/</guid><description>&lt;h2 id="présentation-du-projet"&gt;
+&lt;p&gt;Donc voilà, on va migrer sur github.io, et entre nous, écrire les choses en markdown est bien plus relaxant qu&amp;rsquo;avec l&amp;rsquo;éditeur de wordpress.&lt;/p&gt;</description></item><item><title>À propos de moi</title><link>https://tiphergane.github.io/about/</link><pubDate>Wed, 10 Jun 2026 11:25:47 +0200</pubDate><guid>https://tiphergane.github.io/about/</guid><description>&lt;p&gt;Geek et cats addict, né dans les années 80.&lt;br&gt;
+A vu défiler les technologies au cours de ces dernières décénies.&lt;br&gt;
+Ex gamers et streamer, je râle donc je suis !&lt;/p&gt;
+&lt;p&gt;Ce blog n&amp;rsquo;engage que moi.&lt;/p&gt;</description></item><item><title>Partage de connaissance - lancement du repo learning</title><link>https://tiphergane.github.io/posts/learning/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/posts/learning/</guid><description>&lt;h2 id="présentation-du-projet"&gt;
  Présentation du projet
  &lt;a class="heading-link" href="#pr%c3%a9sentation-du-projet"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
