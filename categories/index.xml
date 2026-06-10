@@ -1,1 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Les chatons ont la réponse - github.io</title><link>https://tiphergane.github.io/categories/</link><description>Recent content in Categories on Les chatons ont la réponse - github.io</description><generator>Hugo</generator><language>fr</language><lastBuildDate>Wed, 10 Jun 2026 15:21:37 +0200</lastBuildDate><atom:link href="https://tiphergane.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Ctf</title><link>https://tiphergane.github.io/categories/ctf/</link><pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate><guid>https://tiphergane.github.io/categories/ctf/</guid><description/></item><item><title>Huntress</title><link>https://tiphergane.github.io/categories/huntress/</link><pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate><guid>https://tiphergane.github.io/categories/huntress/</guid><description/></item><item><title>Writeups</title><link>https://tiphergane.github.io/categories/writeups/</link><pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate><guid>https://tiphergane.github.io/categories/writeups/</guid><description/></item><item><title>Shutlock</title><link>https://tiphergane.github.io/categories/shutlock/</link><pubDate>Wed, 10 Jun 2026 11:20:14 +0200</pubDate><guid>https://tiphergane.github.io/categories/shutlock/</guid><description/></item><item><title>Code</title><link>https://tiphergane.github.io/categories/code/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/categories/code/</guid><description/></item><item><title>Github</title><link>https://tiphergane.github.io/categories/github/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/categories/github/</guid><description/></item><item><title>Kitten's Life</title><link>https://tiphergane.github.io/categories/kittens-life/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/categories/kittens-life/</guid><description/></item><item><title>FCSC</title><link>https://tiphergane.github.io/categories/fcsc/</link><pubDate>Wed, 10 Jun 2026 10:16:23 +0200</pubDate><guid>https://tiphergane.github.io/categories/fcsc/</guid><description/></item><item><title>404CTF</title><link>https://tiphergane.github.io/categories/404ctf/</link><pubDate>Wed, 10 Jun 2026 10:09:20 +0200</pubDate><guid>https://tiphergane.github.io/categories/404ctf/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categories on Les chatons ont la réponse - github.io</title>
+		<link>http://localhost:1313/categories/</link>
+		<description>Recent content in Categories on Les chatons ont la réponse - github.io</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 10 Jun 2026 15:21:37 +0200</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ctf</title>
+				<link>http://localhost:1313/categories/ctf/</link>
+				<pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate>
+				<guid>http://localhost:1313/categories/ctf/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Huntress</title>
+				<link>http://localhost:1313/categories/huntress/</link>
+				<pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate>
+				<guid>http://localhost:1313/categories/huntress/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Writeups</title>
+				<link>http://localhost:1313/categories/writeups/</link>
+				<pubDate>Wed, 10 Jun 2026 15:21:37 +0200</pubDate>
+				<guid>http://localhost:1313/categories/writeups/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shutlock</title>
+				<link>http://localhost:1313/categories/shutlock/</link>
+				<pubDate>Wed, 10 Jun 2026 11:20:14 +0200</pubDate>
+				<guid>http://localhost:1313/categories/shutlock/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Code</title>
+				<link>http://localhost:1313/categories/code/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>http://localhost:1313/categories/code/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Github</title>
+				<link>http://localhost:1313/categories/github/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>http://localhost:1313/categories/github/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kitten&#39;s Life</title>
+				<link>http://localhost:1313/categories/kittens-life/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>http://localhost:1313/categories/kittens-life/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>FCSC</title>
+				<link>http://localhost:1313/categories/fcsc/</link>
+				<pubDate>Wed, 10 Jun 2026 10:16:23 +0200</pubDate>
+				<guid>http://localhost:1313/categories/fcsc/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>404CTF</title>
+				<link>http://localhost:1313/categories/404ctf/</link>
+				<pubDate>Wed, 10 Jun 2026 10:09:20 +0200</pubDate>
+				<guid>http://localhost:1313/categories/404ctf/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
