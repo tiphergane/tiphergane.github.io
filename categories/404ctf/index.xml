@@ -1,41 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>404CTF on Les chatons ont la réponse - github.io</title><link>https://tiphergane.github.io/categories/404ctf/</link><description>Recent content in 404CTF on Les chatons ont la réponse - github.io</description><generator>Hugo</generator><language>fr</language><lastBuildDate>Wed, 10 Jun 2026 10:09:20 +0200</lastBuildDate><atom:link href="https://tiphergane.github.io/categories/404ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>404CTF - les writeups</title><link>https://tiphergane.github.io/writeups/404ctf/</link><pubDate>Wed, 10 Jun 2026 10:09:20 +0200</pubDate><guid>https://tiphergane.github.io/writeups/404ctf/</guid><description>&lt;h2 id="2022"&gt;
- 2022
- &lt;a class="heading-link" href="#2022"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/tiphergane/404CTF" class="external-link" target="_blank" rel="noopener"&gt;404CTF 2022 - première édition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2023"&gt;
- 2023
- &lt;a class="heading-link" href="#2023"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/tiphergane/404CTF_2023" class="external-link" target="_blank" rel="noopener"&gt;404CTF 2023&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2024"&gt;
- 2024
- &lt;a class="heading-link" href="#2024"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="2025"&gt;
- 2025
- &lt;a class="heading-link" href="#2025"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="2026"&gt;
- 2026
- &lt;a class="heading-link" href="#2026"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>404CTF on Les chatons ont la réponse - github.io</title>
+		<link>http://localhost:1313/categories/404ctf/</link>
+		<description>Recent content in 404CTF on Les chatons ont la réponse - github.io</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 10 Jun 2026 10:09:20 +0200</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/404ctf/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>404CTF - les writeups</title>
+				<link>http://localhost:1313/writeups/404ctf/</link>
+				<pubDate>Wed, 10 Jun 2026 10:09:20 +0200</pubDate>
+				<guid>http://localhost:1313/writeups/404ctf/</guid>
+				<description>&lt;h2 id=&#34;2022&#34;&gt;&#xA;  2022&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2022&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/tiphergane/404CTF&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;404CTF 2022 - première édition&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2023&#34;&gt;&#xA;  2023&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2023&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/tiphergane/404CTF_2023&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;404CTF 2023&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2024&#34;&gt;&#xA;  2024&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2024&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;2025&#34;&gt;&#xA;  2025&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2025&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;2026&#34;&gt;&#xA;  2026&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#2026&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+			</item>
+	</channel>
+</rss>
