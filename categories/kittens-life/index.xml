@@ -1,25 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kitten's Life on Les chatons ont la réponse - github.io</title><link>https://tiphergane.github.io/categories/kittens-life/</link><description>Recent content in Kitten's Life on Les chatons ont la réponse - github.io</description><generator>Hugo</generator><language>fr</language><lastBuildDate>Wed, 10 Jun 2026 18:32:10 +0200</lastBuildDate><atom:link href="https://tiphergane.github.io/categories/kittens-life/index.xml" rel="self" type="application/rss+xml"/><item><title>Bonjour github.io</title><link>https://tiphergane.github.io/posts/github.io/</link><pubDate>Wed, 10 Jun 2026 18:32:10 +0200</pubDate><guid>https://tiphergane.github.io/posts/github.io/</guid><description>&lt;p&gt;Et oui, depuis le temps que je regardais les pages github.io et que j&amp;rsquo;avais envie de m&amp;rsquo;y coller, ben voilà, c&amp;rsquo;est chose faite.&lt;/p&gt;
-&lt;p&gt;Mais pourquoi je fais cette migration ? C&amp;rsquo;est tout simple, wordpress demande une infra à maintenir, c&amp;rsquo;était un défi durant mon arrêt de travail qui à duré de septembre 2016 à novembre 2017, aujourd&amp;rsquo;hui les priorités ont changées.&lt;/p&gt;
-&lt;p&gt;En quoi ont-elles changées ? c&amp;rsquo;est simple:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;désormais, je suis consultant en cybersécurité, donc j&amp;rsquo;ai une montée en compétence sur d&amp;rsquo;autres sujets que de l&amp;rsquo;infra&lt;/li&gt;
-&lt;li&gt;le blog était auto-hébergé, ce qui me rajoutais une charge de &amp;ldquo;travail&amp;rdquo; à la maison pour suivre les CVE et patcher (pas envie de faire partie d&amp;rsquo;un botnet)&lt;/li&gt;
-&lt;li&gt;exposer un port 443 sur le net, et c&amp;rsquo;est la foire au scan/attaques. Mon firewall me remonte des tétrachiées de tentative d&amp;rsquo;attaques faites par des script kiddies et j&amp;rsquo;ai plus envie de risquer de compromettre la sécurité du mon réseau juste pour faire des analyses.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Donc voilà, on va migrer sur github.io, et entre nous, écrire les choses en markdown est bien plus relaxant qu&amp;rsquo;avec l&amp;rsquo;éditeur de wordpress.&lt;/p&gt;</description></item><item><title>À propos de moi</title><link>https://tiphergane.github.io/about/</link><pubDate>Wed, 10 Jun 2026 11:25:47 +0200</pubDate><guid>https://tiphergane.github.io/about/</guid><description>&lt;p&gt;Geek et cats addict, né dans les années 80.&lt;br&gt;
-A vu défiler les technologies au cours de ces dernières décénies.&lt;br&gt;
-Ex gamers et streamer, je râle donc je suis !&lt;/p&gt;
-&lt;p&gt;Ce blog n&amp;rsquo;engage que moi.&lt;/p&gt;</description></item><item><title>Partage de connaissance - lancement du repo learning</title><link>https://tiphergane.github.io/posts/learning/</link><pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate><guid>https://tiphergane.github.io/posts/learning/</guid><description>&lt;h2 id="présentation-du-projet"&gt;
- Présentation du projet
- &lt;a class="heading-link" href="#pr%c3%a9sentation-du-projet"&gt;
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
- &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;Depuis que j&amp;rsquo;ai commencé les CTF, on ne va pas se le cacher, mais j&amp;rsquo;ai appris plein de choses. Et celles-ci ne servent à rien si elle ne sont pas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;stockées&lt;/li&gt;
-&lt;li&gt;organisées&lt;/li&gt;
-&lt;li&gt;partagées&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;j&amp;rsquo;ai donc décidé de mettre en ligne tout ce que j&amp;rsquo;avais appris au fil du temps, et me créer un espace où je pourrais ajouter ce que j&amp;rsquo;apprendrais encore dans les années à venir.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Kitten&#39;s Life on Les chatons ont la réponse - github.io</title>
+		<link>https://tiphergane.github.io/categories/kittens-life/</link>
+		<description>Recent content in Kitten&#39;s Life on Les chatons ont la réponse - github.io</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 15 Jun 2026 10:54:43 +0200</lastBuildDate>
+		
+			<atom:link href="https://tiphergane.github.io/categories/kittens-life/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Shutlock 2026</title>
+				<link>https://tiphergane.github.io/posts/shutlock_2026/</link>
+				<pubDate>Mon, 15 Jun 2026 10:54:43 +0200</pubDate>
+				<guid>https://tiphergane.github.io/posts/shutlock_2026/</guid>
+				<description>&lt;p&gt;Et c&amp;rsquo;est partie pour la 3ème édition du CTF Shutlock ! Les pré-inscriptions sont ouverte &lt;a href=&#34;https://shutlock.fr&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Après avoir protégé les J.O 2024 et le festival de Cannes 2025 contre l&amp;rsquo;acteur maveillant APT Get, la DGSI a réussi à avoir quelqu&amp;rsquo;un d&amp;rsquo;infiltré au sein de cette équipe.&lt;/p&gt;&#xA;&lt;h2 id=&#34;présentation-rapide&#34;&gt;&#xA;  Présentation rapide&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#pr%c3%a9sentation-rapide&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Le CTF Shutlock est la résultante de la collaboration entre :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;la DGSI&lt;/li&gt;&#xA;&lt;li&gt;l&amp;rsquo;école ÉPITA (École d&amp;rsquo;ingénieurs en informatique)&lt;/li&gt;&#xA;&lt;li&gt;OVHcloud&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Vous êtes plutôt Forensic, Reverse, Pwn, OSINT, Crypto, Web et autres ? Dans quel domaine de la sécurité informatique excellez-vous?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bonjour github.io</title>
+				<link>https://tiphergane.github.io/posts/github.io/</link>
+				<pubDate>Wed, 10 Jun 2026 18:32:10 +0200</pubDate>
+				<guid>https://tiphergane.github.io/posts/github.io/</guid>
+				<description>&lt;p&gt;Et oui, depuis le temps que je regardais les pages github.io et que j&amp;rsquo;avais envie de m&amp;rsquo;y coller, ben voilà, c&amp;rsquo;est chose faite.&lt;/p&gt;&#xA;&lt;p&gt;Mais pourquoi je fais cette migration ? C&amp;rsquo;est tout simple, wordpress demande une infra à maintenir, c&amp;rsquo;était un défi durant mon arrêt de travail qui à duré de septembre 2016 à novembre 2017, aujourd&amp;rsquo;hui les priorités ont changées.&lt;/p&gt;&#xA;&lt;p&gt;En quoi ont-elles changées ? c&amp;rsquo;est simple:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;désormais, je suis consultant en cybersécurité, donc j&amp;rsquo;ai une montée en compétence sur d&amp;rsquo;autres sujets que de l&amp;rsquo;infra&lt;/li&gt;&#xA;&lt;li&gt;le blog était auto-hébergé, ce qui me rajoutais une charge de &amp;ldquo;travail&amp;rdquo; à la maison pour suivre les CVE et patcher (pas envie de faire partie d&amp;rsquo;un botnet)&lt;/li&gt;&#xA;&lt;li&gt;exposer un port 443 sur le net, et c&amp;rsquo;est la foire au scan/attaques. Mon firewall me remonte des tétrachiées de tentative d&amp;rsquo;attaques faites par des script kiddies et j&amp;rsquo;ai plus envie de risquer de compromettre la sécurité du mon réseau juste pour faire des analyses.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Donc voilà, on va migrer sur github.io, et entre nous, écrire les choses en markdown est bien plus relaxant qu&amp;rsquo;avec l&amp;rsquo;éditeur de wordpress.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>À propos de moi</title>
+				<link>https://tiphergane.github.io/about/</link>
+				<pubDate>Wed, 10 Jun 2026 11:25:47 +0200</pubDate>
+				<guid>https://tiphergane.github.io/about/</guid>
+				<description>&lt;p&gt;Geek et cats addict, né dans les années 80.&lt;br&gt;&#xA;A vu défiler les technologies au cours de ces dernières décénies.&lt;br&gt;&#xA;Ex gamers et streamer, je râle donc je suis !&lt;/p&gt;&#xA;&lt;p&gt;Ce blog n&amp;rsquo;engage que moi.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Partage de connaissance - lancement du repo learning</title>
+				<link>https://tiphergane.github.io/posts/learning/</link>
+				<pubDate>Wed, 10 Jun 2026 10:29:22 +0200</pubDate>
+				<guid>https://tiphergane.github.io/posts/learning/</guid>
+				<description>&lt;h2 id=&#34;présentation-du-projet&#34;&gt;&#xA;  Présentation du projet&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#pr%c3%a9sentation-du-projet&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Depuis que j&amp;rsquo;ai commencé les CTF, on ne va pas se le cacher, mais j&amp;rsquo;ai appris plein de choses. Et celles-ci ne servent à rien si elle ne sont pas:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;stockées&lt;/li&gt;&#xA;&lt;li&gt;organisées&lt;/li&gt;&#xA;&lt;li&gt;partagées&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;j&amp;rsquo;ai donc décidé de mettre en ligne tout ce que j&amp;rsquo;avais appris au fil du temps, et me créer un espace où je pourrais ajouter ce que j&amp;rsquo;apprendrais encore dans les années à venir.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
