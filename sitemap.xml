@@ -3,36 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tiphergane.github.io/authors/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/categories/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/categories/ctf/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/series/ctf/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/tags/ctf/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/categories/kittens-life/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/tags/kittens-life/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/posts/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/series/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/tags/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/authors/tiphergane/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/tags/yeswehack/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/posts/ywh_first_success/</loc>
+    <lastmod>2026-06-24T10:39:22+02:00</lastmod>
+  </url><url>
+    <loc>https://tiphergane.github.io/categories/ctf/</loc>
     <lastmod>2026-06-15T10:54:43+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/tags/dgsi/</loc>
     <lastmod>2026-06-15T10:54:43+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/categories/kittens-life/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
     <loc>https://tiphergane.github.io/tags/ovhcloud/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/posts/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/series/</loc>
     <lastmod>2026-06-15T10:54:43+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/categories/shutlock/</loc>
@@ -47,12 +62,6 @@
     <loc>https://tiphergane.github.io/posts/shutlock_2026/</loc>
     <lastmod>2026-06-15T10:54:43+02:00</lastmod>
   </url><url>
-    <loc>https://tiphergane.github.io/tags/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/authors/tiphergane/</loc>
-    <lastmod>2026-06-15T10:54:43+02:00</lastmod>
-  </url><url>
     <loc>https://tiphergane.github.io/tags/blog/</loc>
     <lastmod>2026-06-10T18:32:10+02:00</lastmod>
   </url><url>
@@ -63,9 +72,6 @@
     <lastmod>2026-06-10T18:32:10+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/series/kittens-life/</loc>
-    <lastmod>2026-06-10T18:32:10+02:00</lastmod>
-  </url><url>
-    <loc>https://tiphergane.github.io/tags/kittens-life/</loc>
     <lastmod>2026-06-10T18:32:10+02:00</lastmod>
   </url><url>
     <loc>https://tiphergane.github.io/tags/migration/</loc>

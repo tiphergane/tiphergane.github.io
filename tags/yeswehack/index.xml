@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>YesWeHack on Les chatons ont la réponse - github.io</title>
+		<link>https://tiphergane.github.io/tags/yeswehack/</link>
+		<description>Recent content in YesWeHack on Les chatons ont la réponse - github.io</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 24 Jun 2026 10:39:22 +0200</lastBuildDate>
+		
+			<atom:link href="https://tiphergane.github.io/tags/yeswehack/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>YesWeHack : Premier succès au dojo</title>
+				<link>https://tiphergane.github.io/posts/ywh_first_success/</link>
+				<pubDate>Wed, 24 Jun 2026 10:39:22 +0200</pubDate>
+				<guid>https://tiphergane.github.io/posts/ywh_first_success/</guid>
+				<description>&lt;p&gt;Ça y est, ô joie, j&amp;rsquo;ai enfin réussi à solve un challenge du dojo &lt;a href=&#34;https://dojo-yeswehack.com&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YesWeHack&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Je prépare le writeup, pour le moment, je n&amp;rsquo;en dit pas plus car le chall est toujours actif.&lt;/p&gt;&#xA;&lt;p&gt;Le chall en lui même n&amp;rsquo;est pas compliqué, mais nécessite de comprendre deux sujets super interessant en sécurité informatique, vous allez voir lors du writeup.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;tiphergane&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
