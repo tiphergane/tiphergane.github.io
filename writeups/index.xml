@@ -18,7 +18,7 @@
 				<link>https://tiphergane.github.io/writeups/shutlock_mla1/</link>
 				<pubDate>Tue, 07 Jul 2026 09:29:16 +0200</pubDate>
 				<guid>https://tiphergane.github.io/writeups/shutlock_mla1/</guid>
-				<description>&lt;hr&gt;&#xA;&lt;p&gt;Nous avons intercepté une archive MLA. Cette archive contient le code PIN du téléphone d&amp;rsquo;une cible. Il nous faut à tout prix ce code PIN pour accéder au téléphone de la cible. Malheureusement, l&amp;rsquo;archive est corrompue. Quelques octets sont manquants. S&amp;rsquo;il vous plaît, analysez l&amp;rsquo;archive et retrouvez le code PIN. Nous savons que le fichier dans l&amp;rsquo;archive ne contient que le code PIN et rien d&amp;rsquo;autre.&lt;/p&gt;&#xA;&lt;p&gt;Le flag est au format suivant : SHLK{codepin}&#xA;Exemple : SHLK{1234}&#xA;Source : codepin_corrupted.mla&lt;/p&gt;</description>
+				<description>&lt;hr&gt;&#xA;&lt;p&gt;Nous avons intercepté une archive MLA. Cette archive contient le code PIN du téléphone d&amp;rsquo;une cible. Il nous faut à tout prix ce code PIN pour accéder au téléphone de la cible. Malheureusement, l&amp;rsquo;archive est corrompue. Quelques octets sont manquants. S&amp;rsquo;il vous plaît, analysez l&amp;rsquo;archive et retrouvez le code PIN. Nous savons que le fichier dans l&amp;rsquo;archive ne contient que le code PIN et rien d&amp;rsquo;autre.&lt;/p&gt;&#xA;&lt;p&gt;Le flag est au format suivant : SHLK{codepin}&lt;br&gt;&#xA;Exemple : SHLK{1234}&lt;br&gt;&#xA;Source : codepin_corrupted.mla&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Huntress writeups</title>
