@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 10 Jun 2026 15:21:37 +0200</lastBuildDate>
+			<lastBuildDate>Sun, 09 Aug 2026 20:52:07 +0200</lastBuildDate>
 		
 			<atom:link href="https://tiphergane.github.io/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Management Wants a Word — Forensics (Hacker Holidays, Day 14)</title>
+				<link>https://tiphergane.github.io/writeups/thm-hh26_management_wants_a_word/</link>
+				<pubDate>Sun, 09 Aug 2026 20:52:07 +0200</pubDate>
+				<guid>https://tiphergane.github.io/writeups/thm-hh26_management_wants_a_word/</guid>
+				<description>&lt;h1 id=&#34;management-wants-a-word--forensics-hacker-holidays-day-14&#34;&gt;&#xA;  Management Wants a Word — Forensics (Hacker Holidays, Day 14)&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#management-wants-a-word--forensics-hacker-holidays-day-14&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Room:&lt;/strong&gt; TryHackMe — Hacker Holidays&#xA;&lt;strong&gt;Catégorie:&lt;/strong&gt; Forensics / Windows Registry / DPAPI&#xA;&lt;strong&gt;Tags:&lt;/strong&gt; &lt;code&gt;KAPE&lt;/code&gt; &lt;code&gt;NTUSER.DAT&lt;/code&gt; &lt;code&gt;DPAPI&lt;/code&gt; &lt;code&gt;impacket&lt;/code&gt; &lt;code&gt;hashcat&lt;/code&gt; &lt;code&gt;Chrome&lt;/code&gt; &lt;code&gt;VeraCrypt&lt;/code&gt; &lt;code&gt;steganography&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;tldr&#34;&gt;&#xA;  TL;DR&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#tldr&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Un dump KAPE fournit une arborescence Windows. L&amp;rsquo;énoncé oriente vers le&#xA;navigateur (&amp;ldquo;un navigateur va se souvenir de choses pour toi&amp;rdquo;). Les&#xA;identifiants sauvegardés dans Chrome sont protégés par DPAPI ; pour les&#xA;déchiffrer il faut casser le mot de passe Windows de l&amp;rsquo;utilisatrice via son&#xA;hash NTLM (SAM), puis remonter toute la chaîne DPAPI jusqu&amp;rsquo;à la clé AES de&#xA;Chrome. Les identifiants récupérés ne sont pas des creds web mais la&#xA;passphrase d&amp;rsquo;un volume &lt;strong&gt;VeraCrypt&lt;/strong&gt; déguisé en fichier &lt;code&gt;backup&lt;/code&gt;. Le flag est&#xA;caché par stéganographie dans une image intégrée à un PDF présent dans ce&#xA;volume.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Huntress writeups</title>
 				<link>https://tiphergane.github.io/writeups/huntress/</link>

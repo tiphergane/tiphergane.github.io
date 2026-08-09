@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Management Wants a Word — Forensics (Hacker Holidays, Day 14) · Les chatons ont la réponse - github.io
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="tiphergane">
+<meta name="description" content="Dernier Chall du Hacker Holidays de TryHackMe">
+<meta name="keywords" content="blog,personnel,cybersécurité,ctf">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Management Wants a Word — Forensics (Hacker Holidays, Day 14)">
+	<meta name="twitter:description" content="Dernier Chall du Hacker Holidays de TryHackMe">
+
+<meta property="og:url" content="https://tiphergane.github.io/writeups/thm-hh26_management_wants_a_word/">
+	<meta property="og:site_name" content="Les chatons ont la réponse - github.io">
+	<meta property="og:title" content="Management Wants a Word — Forensics (Hacker Holidays, Day 14)">
+	<meta property="og:description" content="Dernier Chall du Hacker Holidays de TryHackMe">
+	<meta property="og:locale" content="fr">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="writeups">
+		<meta property="article:published_time" content="2026-08-09T20:52:07+02:00">
+		<meta property="article:modified_time" content="2026-08-09T20:52:07+02:00">
+
+
+
+
+<link rel="canonical" href="https://tiphergane.github.io/writeups/thm-hh26_management_wants_a_word/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://tiphergane.github.io/">
+      Les chatons ont la réponse - github.io
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/writeups/">Writeups</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://tiphergane.github.io/writeups/thm-hh26_management_wants_a_word/">
+          Management Wants a Word — Forensics (Hacker Holidays, Day 14)
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="management-wants-a-word--forensics-hacker-holidays-day-14">
+  Management Wants a Word — Forensics (Hacker Holidays, Day 14)
+  <a class="heading-link" href="#management-wants-a-word--forensics-hacker-holidays-day-14">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><strong>Room:</strong> TryHackMe — Hacker Holidays
+<strong>Catégorie:</strong> Forensics / Windows Registry / DPAPI
+<strong>Tags:</strong> <code>KAPE</code> <code>NTUSER.DAT</code> <code>DPAPI</code> <code>impacket</code> <code>hashcat</code> <code>Chrome</code> <code>VeraCrypt</code> <code>steganography</code></p>
+<h2 id="tldr">
+  TL;DR
+  <a class="heading-link" href="#tldr">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Un dump KAPE fournit une arborescence Windows. L&rsquo;énoncé oriente vers le
+navigateur (&ldquo;un navigateur va se souvenir de choses pour toi&rdquo;). Les
+identifiants sauvegardés dans Chrome sont protégés par DPAPI ; pour les
+déchiffrer il faut casser le mot de passe Windows de l&rsquo;utilisatrice via son
+hash NTLM (SAM), puis remonter toute la chaîne DPAPI jusqu&rsquo;à la clé AES de
+Chrome. Les identifiants récupérés ne sont pas des creds web mais la
+passphrase d&rsquo;un volume <strong>VeraCrypt</strong> déguisé en fichier <code>backup</code>. Le flag est
+caché par stéganographie dans une image intégrée à un PDF présent dans ce
+volume.</p>
+<hr>
+<h2 id="1-reconnaissance">
+  1. Reconnaissance
+  <a class="heading-link" href="#1-reconnaissance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Arborescence fournie (extrait) :</p>
+<pre tabindex="0"><code>./C/Users/vera/Documents/backup
+./C/Users/vera/NTUSER.DAT (+ .LOG1/.LOG2)
+./C/Windows/System32/config/{SAM,SYSTEM,SOFTWARE,SECURITY,DEFAULT} (+ LOGs)
+</code></pre><p>Le fichier <code>backup</code> attire l&rsquo;attention :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ stat -c%s ./C/Users/vera/Documents/backup
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">104857600</span>            <span style="color:#75715e"># exactement 100 MiB</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ file ./C/Users/vera/Documents/backup
+</span></span><span style="display:flex;"><span>./C/Users/vera/Documents/backup: data   <span style="color:#75715e"># entropie élevée, aucun magic number</span>
+</span></span></code></pre></div><p>Une taille aussi ronde et l&rsquo;absence totale de header laissent penser à un
+conteneur chiffré créé volontairement (VeraCrypt/TrueCrypt ne posent pas de
+header en clair, par design, pour le déni plausible).</p>
+<h2 id="2-fausse-piste--artefacts-registre-classiques">
+  2. Fausse piste : artefacts registre classiques
+  <a class="heading-link" href="#2-fausse-piste--artefacts-registre-classiques">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Première intuition : &ldquo;dernières commandes&rdquo; → <code>RunMRU</code>, <code>TypedPaths</code>,
+<code>UserAssist</code>, <code>WordWheelQuery</code> dans <code>NTUSER.DAT</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hivexregedit --export <span style="color:#e6db74">&#34;./C/Users/vera/NTUSER.DAT&#34;</span> <span style="color:#e6db74">&#39;\&#39;</span> &gt; ntuser.reg
+</span></span><span style="display:flex;"><span>rg -i <span style="color:#e6db74">&#34;runmru|wordwheelquery|typedpaths&#34;</span> ntuser.reg
+</span></span></code></pre></div><p>Toutes ces clés existent mais sont <strong>vides</strong>, y compris après rejeu des
+journaux de transaction (<code>.LOG1</code>/<code>.LOG2</code>) via <code>regipy</code>. Piste abandonnée —
+l&rsquo;indice narratif de la room pointe explicitement ailleurs :</p>
+<blockquote>
+<p><em>&ldquo;ok so apparently a browser will remember things for you that you never
+told anyone else 💀 not every hidden file needs a password cracker, some of
+them just need a really good memory&rdquo;</em> — @0xMia</p>
+</blockquote>
+<h2 id="3-artefacts-navigateur">
+  3. Artefacts navigateur
+  <a class="heading-link" href="#3-artefacts-navigateur">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Le profil de <code>vera</code> contient une installation <strong>Chrome for Testing</strong> (build
+sans App-Bound Encryption — DPAPI simple, pas la double couche introduite
+dans Chrome 127+) :</p>
+<pre tabindex="0"><code>C:\Users\vera\AppData\Local\Google\Chrome For Testing\User Data\Local State
+C:\Users\vera\AppData\Local\Google\Chrome For Testing\User Data\Default\Login Data
+</code></pre><p>Chrome empile deux couches de chiffrement sur les mots de passe enregistrés :</p>
+<ol>
+<li><code>Local State → os_crypt.encrypted_key</code> : une clé AES-256 aléatoire,
+chiffrée <strong>une fois</strong> via DPAPI (<code>CryptProtectData</code>).</li>
+<li><code>Login Data</code> (SQLite) : chaque <code>password_value</code> chiffré en
+<strong>AES-256-GCM</strong> avec cette clé AES.</li>
+</ol>
+<p>Il faut donc d&rsquo;abord la <strong>masterkey DPAPI</strong> de l&rsquo;utilisateur, stockée sous :</p>
+<pre tabindex="0"><code>C:\Users\vera\AppData\Roaming\Microsoft\Protect\&lt;SID&gt;\&lt;GUID&gt;
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find . -ipath <span style="color:#e6db74">&#34;*Protect*&#34;</span> -type f
+</span></span><span style="display:flex;"><span>./C/Users/vera/AppData/Roaming/Microsoft/Protect/S-1-5-21-2529683458-431225740-1723070931-1000/c90719ef-5b98-474e-b934-136d606a702a
+</span></span><span style="display:flex;"><span>./C/Users/vera/AppData/Roaming/Microsoft/Protect/S-1-5-21-2529683458-431225740-1723070931-1000/Preferred
+</span></span></code></pre></div><p>Le SID est directement le nom du dossier ; le fichier nommé par son GUID est
+la masterkey chiffrée.</p>
+<pre tabindex="0"><code>SID  : S-1-5-21-2529683458-431225740-1723070931-1000
+GUID : c90719ef-5b98-474e-b934-136d606a702a
+</code></pre><h2 id="4-obtenir-le-mot-de-passe-windows-de-vera">
+  4. Obtenir le mot de passe Windows de vera
+  <a class="heading-link" href="#4-obtenir-le-mot-de-passe-windows-de-vera">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="41--hash-ntlm-via-secretsdumppy-impacket">
+  4.1 — Hash NTLM via <code>secretsdump.py</code> (impacket)
+  <a class="heading-link" href="#41--hash-ntlm-via-secretsdumppy-impacket">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>secretsdump.py -sam ./C/Windows/System32/config/SAM <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>               -system ./C/Windows/System32/config/SYSTEM LOCAL
+</span></span></code></pre></div><pre tabindex="0"><code>vera:1000:aad3b435b51404eeaad3b435b51404ee:1241186a4aac4f34f4bf7ace71b396a8:::
+</code></pre><blockquote>
+<p><strong>Note d&rsquo;environnement.</strong> Sur une machine avec plusieurs installations
+Python/impacket qui se chevauchent, <code>secretsdump.py</code> peut lever une
+<code>TypeError</code> interne (<code>unexpected keyword argument</code>). Le plus fiable est un
+venv isolé :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv /tmp/impvenv
+</span></span><span style="display:flex;"><span>/tmp/impvenv/bin/pip install <span style="color:#e6db74">&#34;impacket==0.12.0&#34;</span> <span style="color:#e6db74">&#34;setuptools&lt;81&#34;</span>
+</span></span><span style="display:flex;"><span>/tmp/impvenv/bin/secretsdump.py -sam SAM -system SYSTEM LOCAL
+</span></span></code></pre></div></blockquote>
+<h3 id="42--crack-du-hash-avec-hashcat">
+  4.2 — Crack du hash avec hashcat
+  <a class="heading-link" href="#42--crack-du-hash-avec-hashcat">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">1000</span> 1241186a4aac4f34f4bf7ace71b396a8 /usr/share/wordlists/rockyou.txt
+</span></span></code></pre></div><pre tabindex="0"><code>1241186a4aac4f34f4bf7ace71b396a8:minivera
+</code></pre><p><strong>Mot de passe Windows de vera : <code>minivera</code></strong></p>
+<blockquote>
+<p><strong>Chemin alternatif.</strong> On peut éviter l&rsquo;étape SAM/SYSTEM entièrement en
+extrayant un hash crackable directement depuis le fichier masterkey avec
+<code>dpapimk2john.py</code> (John the Ripper), puis en le cassant avec
+<code>john</code>/<code>hashcat</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dpapimk2john.py --sid &lt;SID&gt; --masterkey &lt;fichier_masterkey&gt; &gt; mkey.hash
+</span></span><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>rockyou.txt mkey.hash
+</span></span></code></pre></div></blockquote>
+<h2 id="5-déchiffrement-dpapi-avec-les-outils-impacket">
+  5. Déchiffrement DPAPI avec les outils impacket
+  <a class="heading-link" href="#5-d%c3%a9chiffrement-dpapi-avec-les-outils-impacket">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Plutôt qu&rsquo;un script maison, impacket fournit <code>dpapi.py</code> (dans les exemples
+du dépôt) qui couvre tout le pipeline masterkey → blob :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -o dpapi.py https://raw.githubusercontent.com/fortra/impacket/master/examples/dpapi.py
+</span></span></code></pre></div><h3 id="51--déchiffrement-de-la-masterkey-utilisateur">
+  5.1 — Déchiffrement de la masterkey utilisateur
+  <a class="heading-link" href="#51--d%c3%a9chiffrement-de-la-masterkey-utilisateur">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 dpapi.py masterkey <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -file <span style="color:#e6db74">&#34;AppData/Roaming/Microsoft/Protect/&lt;SID&gt;/&lt;GUID&gt;&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -sid S-1-5-21-2529683458-431225740-1723070931-1000 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -password minivera
+</span></span></code></pre></div><p>→ affiche la masterkey déchiffrée (clé de session DPAPI de vera).</p>
+<h3 id="52--déchiffrement-de-la-clé-aes-de-chrome-blob-dpapi">
+  5.2 — Déchiffrement de la clé AES de Chrome (blob DPAPI)
+  <a class="heading-link" href="#52--d%c3%a9chiffrement-de-la-cl%c3%a9-aes-de-chrome-blob-dpapi">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Le champ <code>os_crypt.encrypted_key</code> de <code>Local State</code> est un blob base64
+préfixé <code>DPAPI</code> (5 octets) suivi de la structure DPAPI chiffrée avec la
+masterkey utilisateur :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 dpapi.py blob <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -file local_state_encrypted_key.bin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -key &lt;masterkey déchiffrée à l<span style="color:#960050;background-color:#1e0010">&#39;</span>étape 5.1&gt;
+</span></span></code></pre></div><p>→ clé AES-256 utilisée par Chrome pour chiffrer chaque mot de passe stocké.</p>
+<h2 id="6-déchiffrement-des-identifiants-chrome">
+  6. Déchiffrement des identifiants Chrome
+  <a class="heading-link" href="#6-d%c3%a9chiffrement-des-identifiants-chrome">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>Login Data</code> est une base SQLite. Chaque <code>password_value</code> suit le format
+Chrome standard :</p>
+<pre tabindex="0"><code>[v10 | v11]  (3 octets)  →  nonce GCM (12 octets)  →  ciphertext  →  tag GCM (16 derniers octets)
+</code></pre><p>Avec la clé AES de l&rsquo;étape 5.2, déchiffrement AES-256-GCM direct
+(<code>pycryptodome</code>) sur la table <code>logins</code> :</p>
+<table>
+	<thead>
+			<tr>
+					<th>Champ</th>
+					<th>Valeur</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>URL</td>
+					<td><code>http://bytelotus.thm:8080/</code></td>
+			</tr>
+			<tr>
+					<td>Utilisateur</td>
+					<td><code>VeraSecretVault</code></td>
+			</tr>
+			<tr>
+					<td>Mot de passe</td>
+					<td><code>Wh4t1sV3raD0inG0nTh1sH0st</code></td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+<p><strong>Point d&rsquo;analyse.</strong> <code>bytelotus.thm</code> n&rsquo;est résolvable nulle part dans le
+dump (pas d&rsquo;entrée <code>hosts</code>, aucune trace DNS dans SYSTEM/SOFTWARE). Le nom
+d&rsquo;utilisateur <code>VeraSecretVault</code> et l&rsquo;absence de service réel à cette URL
+suggèrent que ces identifiants ne sont pas des creds web, mais servent de
+<strong>passphrase</strong> pour un conteneur chiffré local — confirmé ci-dessous.</p>
+</blockquote>
+<h2 id="7-backup-est-en-fait-un-volume-veracrypt">
+  7. <code>backup</code> est en fait un volume VeraCrypt
+  <a class="heading-link" href="#7-backup-est-en-fait-un-volume-veracrypt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Taille ronde (100 MiB), entropie maximale, aucun header identifiable — tout
+concorde avec un conteneur VeraCrypt (déni plausible = pas de magic number
+en clair).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir -p /mnt/veracrypt_test
+</span></span><span style="display:flex;"><span>sudo veracrypt --text --mount ./C/Users/vera/Documents/backup /mnt/veracrypt_test <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Wh4t1sV3raD0inG0nTh1sH0st&#34;</span> --pim<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> --keyfiles<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> --protect-hidden<span style="color:#f92672">=</span>no
+</span></span></code></pre></div><p>Montage réussi :</p>
+<pre tabindex="0"><code>/mnt/veracrypt_test/
+├── $RECYCLE.BIN/
+├── System Volume Information/
+└── secret_financial_documents/
+    ├── important_invoice_byte_lotus.pdf
+    └── transactions_q3.csv
+</code></pre><h2 id="8-extraction-du-flag--stéganographie-dans-le-pdf">
+  8. Extraction du flag — stéganographie dans le PDF
+  <a class="heading-link" href="#8-extraction-du-flag--st%c3%a9ganographie-dans-le-pdf">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>transactions_q3.csv</code> contient une ligne suspecte au milieu de transactions
+plausibles :</p>
+<pre tabindex="0"><code>2026-07-12,TXN-10531,Internal Adjustment,Image asset correction,0.00,Archived
+</code></pre><p>→ indice explicite vers une image manipulée.</p>
+<p><code>pdftotext</code> sur le PDF ne renvoie rien : le document est composé uniquement
+d&rsquo;une image scannée. Extraction de l&rsquo;image embarquée :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdfimages -list important_invoice_byte_lotus.pdf
+</span></span><span style="display:flex;"><span>pdfimages -all  important_invoice_byte_lotus.pdf /tmp/pdf_img
+</span></span></code></pre></div><p>L&rsquo;inspection de l&rsquo;image extraite (stéganographie) révèle le flag de la room.</p>
+<h2 id="9-synthèse-de-la-chaîne-complète">
+  9. Synthèse de la chaîne complète
+  <a class="heading-link" href="#9-synth%c3%a8se-de-la-cha%c3%aene-compl%c3%a8te">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Étape</th>
+					<th>Outil / méthode</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Extraction hash NTLM</td>
+					<td><code>impacket secretsdump.py</code> (SAM + SYSTEM)</td>
+			</tr>
+			<tr>
+					<td>Crack du hash</td>
+					<td><code>hashcat -m 1000</code> + rockyou.txt → <code>minivera</code></td>
+			</tr>
+			<tr>
+					<td>Localisation SID / masterkey</td>
+					<td><code>AppData\Roaming\Microsoft\Protect\&lt;SID&gt;</code></td>
+			</tr>
+			<tr>
+					<td>Déchiffrement masterkey DPAPI</td>
+					<td><code>impacket dpapi.py masterkey</code></td>
+			</tr>
+			<tr>
+					<td>Déchiffrement clé AES Chrome</td>
+					<td><code>impacket dpapi.py blob</code> (Local State)</td>
+			</tr>
+			<tr>
+					<td>Déchiffrement credentials</td>
+					<td>AES-256-GCM sur <code>Login Data</code> (SQLite)</td>
+			</tr>
+			<tr>
+					<td>Identification du conteneur</td>
+					<td><code>backup</code> = volume VeraCrypt (100 MiB, sans header)</td>
+			</tr>
+			<tr>
+					<td>Montage du volume</td>
+					<td><code>veracrypt --text --mount</code></td>
+			</tr>
+			<tr>
+					<td>Extraction du flag</td>
+					<td><code>pdfimages</code> + analyse stéganographique</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="flag">
+  Flag
+  <a class="heading-link" href="#flag">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>THM{________________________}
+</code></pre><p><em>(volontairement masqué dans ce write-up public)</em></p>
+<hr>
+<h2 id="outils-utilisés">
+  Outils utilisés
+  <a class="heading-link" href="#outils-utilis%c3%a9s">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><a href="https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape"  class="external-link" target="_blank" rel="noopener">KAPE</a> — collecte des artefacts</li>
+<li><a href="https://github.com/fortra/impacket"  class="external-link" target="_blank" rel="noopener">impacket</a> — <code>secretsdump.py</code>, <code>dpapi.py</code></li>
+<li><a href="https://hashcat.net/hashcat/"  class="external-link" target="_blank" rel="noopener">hashcat</a> — crack NTLM</li>
+<li><a href="https://github.com/mkorman90/regipy"  class="external-link" target="_blank" rel="noopener">regipy</a> — rejeu des transaction logs de registre</li>
+<li><code>hivexregedit</code> (libhivex) — export registre en <code>.reg</code></li>
+<li><a href="https://www.veracrypt.fr/"  class="external-link" target="_blank" rel="noopener">VeraCrypt</a> — montage du volume chiffré</li>
+<li><code>pdfimages</code> (Poppler) — extraction d&rsquo;images de PDF</li>
+</ul>
+
+  </article>
+</section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2021 -
+    
+    2026
+     tiphergane 
+    ·
+    
+    Propulsé par <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
