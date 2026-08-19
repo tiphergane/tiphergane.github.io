@@ -45,7 +45,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -172,7 +172,8 @@ déchiffrer il faut casser le mot de passe Windows de l&rsquo;utilisatrice via s
 hash NTLM (SAM), puis remonter toute la chaîne DPAPI jusqu&rsquo;à la clé AES de
 Chrome. Les identifiants récupérés ne sont pas des creds web mais la
 passphrase d&rsquo;un volume <strong>VeraCrypt</strong> déguisé en fichier <code>backup</code>. Le flag est
-caché dans un PDF présent dans ce volume.</p>
+caché par stéganographie dans une image intégrée à un PDF présent dans ce
+volume.</p>
 <hr>
 <h2 id="1-reconnaissance">
   1. Reconnaissance
@@ -259,14 +260,27 @@ GUID : c90719ef-5b98-474e-b934-136d606a702a
 </span></span></span><span style="display:flex;"><span>               -system ./C/Windows/System32/config/SYSTEM LOCAL
 </span></span></code></pre></div><pre tabindex="0"><code>vera:1000:aad3b435b51404eeaad3b435b51404ee:1241186a4aac4f34f4bf7ace71b396a8:::
 </code></pre><blockquote>
-<p><strong>Note d&rsquo;environnement.</strong> Sur une machine avec plusieurs installations
-Python/impacket qui se chevauchent, <code>secretsdump.py</code> peut lever une
-<code>TypeError</code> interne (<code>unexpected keyword argument</code>). Le plus fiable est un
-venv isolé :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv /tmp/impvenv
-</span></span><span style="display:flex;"><span>/tmp/impvenv/bin/pip install <span style="color:#e6db74">&#34;impacket==0.12.0&#34;</span> <span style="color:#e6db74">&#34;setuptools&lt;81&#34;</span>
-</span></span><span style="display:flex;"><span>/tmp/impvenv/bin/secretsdump.py -sam SAM -system SYSTEM LOCAL
-</span></span></code></pre></div></blockquote>
+<p><strong>⚠️ Bug connu avec impacket v0.13.0.</strong> La version 0.13.0 plante
+systématiquement sur ce cas d&rsquo;usage local :</p>
+<pre tabindex="0"><code>Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies
+[*] Target system bootKey: 0x0f6f73ce89c8cda52d06fcc5131e040f
+[-] SAM hashes extraction failed: SAMHashes.__init__() got an unexpected keyword argument &#39;history&#39;
+[-] NTDSHashes.__init__() got an unexpected keyword argument &#39;localDomainSid&#39;
+[*] Cleaning up...
+</code></pre><p>Le bootKey est bien extrait (donc les hives SAM/SYSTEM sont valides) — le
+crash vient d&rsquo;une régression interne, confirmée et déjà corrigée en amont
+(<a href="https://github.com/fortra/impacket/issues/2107"  class="external-link" target="_blank" rel="noopener">issue #2107</a>). Il suffit
+d&rsquo;utiliser une version plus récente que 0.13.0 :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pipx install impacket
+</span></span><span style="display:flex;"><span>~/.local/pipx/venvs/impacket/bin/secretsdump.py -sam SAM -system SYSTEM LOCAL
+</span></span></code></pre></div><p>Si <code>secretsdump.py</code> dans le <code>PATH</code> pointe encore vers une installation
+système obsolète (<code>/usr/bin/secretsdump.py</code> en v0.13.0, par exemple un
+paquet distro), appeler directement le binaire pipx comme ci-dessus, ou
+faire passer <code>~/.local/bin</code> en priorité pour la session :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOME<span style="color:#e6db74">/.local/bin:</span>$PATH<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Vérifier que le banner affiché indique une version <strong>&gt; 0.13.0</strong> avant de
+continuer.</p>
+</blockquote>
 <h3 id="42--crack-du-hash-avec-hashcat">
   4.2 — Crack du hash avec hashcat
   <a class="heading-link" href="#42--crack-du-hash-avec-hashcat">
@@ -316,12 +330,34 @@ du dépôt) qui couvre tout le pipeline masterkey → blob :</p>
 </h3>
 <p>Le champ <code>os_crypt.encrypted_key</code> de <code>Local State</code> est un blob base64
 préfixé <code>DPAPI</code> (5 octets) suivi de la structure DPAPI chiffrée avec la
-masterkey utilisateur :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 dpapi.py blob <span style="color:#ae81ff">\
+masterkey utilisateur. <code>dpapi.py unprotect</code> attend un fichier binaire brut
+contenant uniquement ce blob DPAPI — il faut donc d&rsquo;abord l&rsquo;extraire du
+JSON, le décoder, et retirer le préfixe avant de l&rsquo;écrire sur disque :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 <span style="color:#e6db74">&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">import json, base64
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">local_state_path = &#34;./C/Users/vera/AppData/Local/Google/Chrome For Testing/User Data/Local State&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">with open(local_state_path, &#34;r&#34;, encoding=&#34;utf-8&#34;) as f:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    local_state = json.load(f)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">encrypted_key_b64 = local_state[&#34;os_crypt&#34;][&#34;encrypted_key&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">encrypted_key_raw = base64.b64decode(encrypted_key_b64)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">assert encrypted_key_raw[:5] == b&#34;DPAPI&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">dpapi_blob_raw = encrypted_key_raw[5:]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">with open(&#34;local_state_encrypted_key.bin&#34;, &#34;wb&#34;) as f:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    f.write(dpapi_blob_raw)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">print(f&#34;Blob écrit : {len(dpapi_blob_raw)} octets&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>Le fichier <code>local_state_encrypted_key.bin</code> ainsi généré peut ensuite être
+déchiffré avec <code>dpapi.py</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.local/pipx/venvs/impacket/bin/dpapi.py unprotect <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span>  -file local_state_encrypted_key.bin <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span>  -key &lt;masterkey déchiffrée à l<span style="color:#960050;background-color:#1e0010">&#39;</span>étape 5.1&gt;
-</span></span></code></pre></div><p>→ clé AES-256 utilisée par Chrome pour chiffrer chaque mot de passe stocké.</p>
-<h2 id="6-déchiffrement-des-identifiants-chrome">
+</span></span></code></pre></div><h2 id="6-déchiffrement-des-identifiants-chrome">
   6. Déchiffrement des identifiants Chrome
   <a class="heading-link" href="#6-d%c3%a9chiffrement-des-identifiants-chrome">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
